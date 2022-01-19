@@ -36,7 +36,7 @@ class Grouping(BaseApi):
         # return jmespath.search("[?name=='ww'].id", self.send(data).json())
         return self.send(data)
 
-    def add_company(self, **kwargs):
+    def add_company(self, grouping_id):
         """
         添加公司
 
@@ -46,7 +46,7 @@ class Grouping(BaseApi):
             'method': 'post',
             'url': 'http://123.56.138.96:3012/api/ainews-user/company-group/company-create',
             'headers': self.header,
-            **kwargs
+            'json': {'id': grouping_id}
         }
         return self.send(data)
 
