@@ -7,8 +7,7 @@ import requests
 class DingRobot:
     def __init__(self):
         self.allure = "http://admin:Aa123456!@59.110.165.85:9000/job/Ai_API/allure/widgets/suites.json"
-        self.ding = 'https: // oapi.dingtalk.com / robot / send?access_token =' \
-                    'bb61434d5d1caadbd63d10ba8108bc32227bab03b6e0df7f1e3ab329649248b'
+        self.ding = 'https://oapi.dingtalk.com/robot/send?access_token=0bb61434d5d1caadbd63d10ba8108bc32227bab03b6e0df7f1e3ab329649248b'
 
         self.error = self.get_allure_error()
 
