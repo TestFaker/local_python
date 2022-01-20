@@ -47,9 +47,10 @@ class TestGrouping:
 
     def test_ai_list(self):
         ai_list_response = self.list.ai_list()
-        print(json.dumps(ai_list_response.json(), indent=4, ensure_ascii=False))
+        # print(json.dumps(ai_list_response.json(), indent=4, ensure_ascii=False))
+        assert jmespath.search('ok', ai_list_response.json()) is False
         more_response = self.list.more()
-        print(json.dumps(more_response.json(), indent=4, ensure_ascii=False))
+        # print(json.dumps(more_response.json(), indent=4, ensure_ascii=False))
 
         # print(json.dumps(add_response.json(), indent=1, ensure_ascii=False))
 
