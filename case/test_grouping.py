@@ -31,6 +31,7 @@ class TestGrouping:
         # print(grouping_id)
         del_response = self.group.del_grouping(grouping_id)
         # print(del_response.json())
+        assert jmespath.search('ok', add_response.json()) is False
 
     @pytest.mark.parametrize("name", ['ww'], ids=["ONE"])
     def test_2_grouping(self, name):
